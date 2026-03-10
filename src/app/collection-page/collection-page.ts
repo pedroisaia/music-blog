@@ -17,6 +17,8 @@ export class CollectionPage {
   selectedDecade = signal<string | null>(null);
   selectedYear = signal<string | null>(null);
   selectedCountry = signal<string | null>(null);
+  
+  selectedReview = signal<any | null>(null);
 
   currentPage = signal(1);
   itemsPerPage = 5;

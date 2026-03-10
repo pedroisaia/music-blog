@@ -65,7 +65,10 @@
   <div class="main-content">
     <div class="blog-list">
       @for (review of paginatedReviews(); track review.id) {
-        <div class="blog-post">
+        <div class="blog-post" 
+             [routerLink]="['/collection-page', review.id]"
+             (mouseenter)="selectedReview.set(review)"
+             (mouseleave)="selectedReview.set(null)">
           <div class="post-content">
             <h3 class="post-title">{{ review.name }}</h3>
             <p class="post-description">
@@ -96,24 +99,23 @@
 
       @if (totalPages() > 1) {
         <div class="pagination">
-          <button 
-            class="page-btn" 
-            [disabled]="currentPage() === 1"
-            (click)="changePage(currentPage() - 1)"
-          >
-            Previous
-          </button>
-          
-          <span class="page-info">
-            Page {{ currentPage() }} of {{ totalPages() }}
-          </span>
-          <button 
-            class="page-btn" 
-            [disabled]="currentPage() === totalPages()"
-            (click)="changePage(currentPage() + 1)"
-          >
-            Next
-          </button>
+          <button class="page-btn" [disabled]="currentPage() === 1" (click)="changePage(currentPage() - 1)">Previous</button>
+          <span class="page-info">Page {{ currentPage() }} of {{ totalPages() }}</span>
+          <button class="page-btn" [disabled]="currentPage() === totalPages()" (click)="changePage(currentPage() + 1)">Next</button>
+        </div>
+      }
+    </div>
+
+    <div class="preview-pane">
+      @if (selectedReview(); as review) {
+        <div class="preview-card">
+          <img [src]="review.image" [alt]="review.name" class="preview-image">
+          <h2 class="preview-title">{{ review.name }}</h2>
+          <p class="preview-price">{{ review.price | currency:'BRL' }}</p>
+          <p class="preview-desc">{{ review.description }}</p>
+          <div class="preview-genres">
+            <span class="genre-tag">{{ review.genres }}</span>
+          </div>
         </div>
       }
     </div>
