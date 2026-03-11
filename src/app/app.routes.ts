@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { AboutPage } from './about-page/about-page';
 import { CollectionPage } from './collection-page/collection-page';
-import { ArticlePage } from './articles-page/articles-page';
+import { ArticlesPage } from './articles-page/articles-page';
 import { HomePage } from './home-page/home-page';
 import { ReviewComponent } from './review/review';
 
@@ -13,7 +13,7 @@ export const routes: Routes = [
     },
     {
         path: 'articles-page',
-        component: ArticlePage,
+        component: ArticlesPage,
     },
     {
         path: 'collection-page',

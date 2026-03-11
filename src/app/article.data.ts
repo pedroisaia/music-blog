@@ -2,42 +2,74 @@ export interface Article {
   id: number;
   title: string;
   keywords: string;
-  image: string;
   description: string;
   date: string;
+  image: string;
 }
 
 export const ARTICLES: Article[] = [
   {
     id: 1,
-    title: 'The Evolution of Music Genres: A Journey Through Time',
-    keywords: 'music, genres, evolution, history, culture',
-    image: 'https://i.scdn.co/image/ab67616d0000b273ad27e16c5f844ea1ad6797cd',
-    description: 'Explore the fascinating evolution of music genres, from classical to contemporary, and how they have shaped our cultural landscape.',
-    date: '2026-10-01'
+    title: "The Future of Digital Sound",
+    keywords: "Technology",
+    description: "Exploring how AI is reshaping the way we produce and consume music in the modern era.",
+    date: "2024-05-20",
+    image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 2,
-    title: 'The Art of Album Cover Design: Visual Storytelling in Music',
-    keywords: 'album cover, design, art, music, visual storytelling',
-    image: 'https://i.scdn.co/image/ab67616d0000b273ad27e16c5f844ea1ad6797cd',
-    description: 'Discover the art of album cover design and how it serves as a powerful medium for visual storytelling in the music industry.',
-    date: '2026-10-15'
+    title: "Vinyl's Great Comeback",
+    keywords: "Music",
+    description: "Why physical media is seeing a massive surge in the digital age among younger collectors.",
+    date: "2024-05-18",
+    image: "https://images.unsplash.com/photo-1603048588665-791ca8aea617?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 3,
-    title: 'The Role of Music in Mental Health: Healing Through Sound',
-    keywords: 'music, mental health, healing, therapy, sound',
-    image: 'https://i.scdn.co/image/ab67616d0000b273ad27e16c5f844ea1ad6797cd',
-    description: 'Learn about the therapeutic benefits of music and how it can play a crucial role in improving mental health and well-being.',
-    date: '2026-11-01'
+    title: "Modern Minimalist Fashion",
+    keywords: "Fashion",
+    description: "How simplicity became the ultimate statement in the early 2020s fashion scene.",
+    date: "2024-05-15",
+    image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?q=80&w=800&auto=format&fit=crop"
   },
   {
     id: 4,
-    title: 'The Influence of Technology on Music Production: From Analog to Digital',
-    keywords: 'technology, music production, analog, digital, innovation',
-    image: 'https://i.scdn.co/image/ab67616d0000b273ad27e16c5f844ea1ad6797cd',
-    description: 'Examine the profound influence of technology on music production, tracing the transition from analog to digital and its impact on creativity.',
-    date: '2026-11-15'
+    title: "Hidden Gems of Kyoto",
+    keywords: "Travel",
+    description: "A guide to the quietest temples and best hidden tea houses in the heart of Japan.",
+    date: "2024-05-10",
+    image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 5,
+    title: "The Rise of Cyberpunk Literature",
+    keywords: "Literature",
+    description: "Analyzing the neon-soaked roots and the philosophical weight of modern sci-fi writing.",
+    date: "2024-05-05",
+    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 6,
+    title: "Sustainable Travel Tips",
+    keywords: "Travel",
+    description: "Practical ways to explore the world while maintaining a low environmental footprint.",
+    date: "2024-05-01",
+    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 7,
+    title: "Studio Design Evolution",
+    keywords: "Technology",
+    description: "How home studios are matching the quality of professional recording environments.",
+    date: "2024-04-28",
+    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 8,
+    title: "The Jazz Renaissance",
+    keywords: "Music",
+    description: "A new generation of musicians is bringing jazz back to the forefront of global culture.",
+    date: "2024-04-25",
+    image: "https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=800&auto=format&fit=crop"
   }
 ];
