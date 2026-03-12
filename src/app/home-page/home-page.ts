@@ -1,5 +1,5 @@
-import { Component, signal, computed } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, signal, computed, inject } from '@angular/core';
+import { RouterModule, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ARTICLES } from '../article.data';
@@ -12,6 +12,8 @@ import { ARTICLES } from '../article.data';
   styleUrl: './home-page.css'
 })
 export class HomePage {
+  private router = inject(Router);
+
   searchTerm = signal('');
   selectedTheme = signal('All');
   
@@ -38,11 +40,7 @@ export class HomePage {
   });
 
   setTheme(theme: string) {
-    
-  if (this.selectedTheme() === theme) {
-    this.selectedTheme.set('All');
-  } else {
-    this.selectedTheme.set(theme);
+    // Navigates to the articles page and passes the theme as a URL query parameter!
+    this.router.navigate(['/articles-page'], { queryParams: { theme: theme } });
   }
-}
 }

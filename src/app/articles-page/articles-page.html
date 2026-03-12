@@ -28,19 +28,30 @@
     </div>
   </div>
 
-  <div class="masonry-grid">
-    @for (article of articles(); track article.title) {
-      <div class="masonry-item">
-        <div class="article-card">
-          <img [src]="article.image" [alt]="article.title" class="article-image">
-          
-          <div class="article-info">
-            <h3 class="article-title">{{ article.title }}</h3>
-            <div class="title-underline"></div>
-            <p class="article-date">{{ article.date }}</p>
+  <div class="expandable-container" [class.expanded]="isExpanded()">
+    
+    <div class="masonry-grid">
+      @for (article of filteredArticles(); track article.title) {
+        <div class="masonry-item">
+          <div class="article-card">
+            <img [src]="article.image" [alt]="article.title" class="article-image">
+            <div class="article-info">
+              <h3 class="article-title">{{ article.title }}</h3>
+              <div class="title-underline"></div>
+              <p class="article-date">{{ article.date }}</p>
+            </div>
           </div>
         </div>
+      }
+    </div>
+
+    @if (!isExpanded() && filteredArticles().length > 8) {
+      <div class="fade-overlay">
+        <button class="filter-rect show-more-btn" (click)="isExpanded.set(true)">
+          Show More
+        </button>
       </div>
     }
+
   </div>
 </div>

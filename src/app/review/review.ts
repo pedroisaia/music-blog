@@ -9,7 +9,7 @@ import { REVIEWS, Review } from '../review.data';
   imports: [RouterModule, CurrencyPipe],
   template: `
     <div class="detail-container">
-
+      
       <a routerLink="/collection-page" class="back-link">&larr; Back to Shop</a>
 
       @if (review(); as p) {

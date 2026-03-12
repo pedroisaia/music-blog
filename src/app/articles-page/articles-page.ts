@@ -1,5 +1,5 @@
-import { Component, signal, computed } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, signal, computed, inject, OnInit } from '@angular/core';
+import { RouterModule, ActivatedRoute } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ARTICLES } from '../article.data';
@@ -11,13 +11,23 @@ import { ARTICLES } from '../article.data';
   templateUrl: './articles-page.html',
   styleUrl: './articles-page.css'
 })
-export class ArticlesPage {
+export class ArticlesPage implements OnInit {
+  private route = inject(ActivatedRoute);
+
   searchTerm = signal('');
   selectedTheme = signal('All');
+  isExpanded = signal(false); // Controls the Show More toggle
   
   themes = ['All', 'Music', 'Technology', 'Literature', 'Travel', 'Fashion'];
-
   articles = signal(ARTICLES);
+
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      if (params['theme']) {
+        this.selectedTheme.set(params['theme']);
+      }
+    });
+  }
 
   filteredArticles = computed(() => {
     const term = this.searchTerm().toLowerCase();
@@ -31,18 +41,12 @@ export class ArticlesPage {
     });
   });
 
-  mainArticle = computed(() => this.filteredArticles()[0]);
-  sideArticles = computed(() => this.filteredArticles().slice(1, 3));
-  listArticles = computed(() => {
-    return this.filteredArticles().slice(0, 5);
-  });
-
   setTheme(theme: string) {
-    
-  if (this.selectedTheme() === theme) {
-    this.selectedTheme.set('All');
-  } else {
-    this.selectedTheme.set(theme);
+    if (this.selectedTheme() === theme) {
+      this.selectedTheme.set('All');
+    } else {
+      this.selectedTheme.set(theme);
+    }
+    this.isExpanded.set(false);
   }
-}
 }

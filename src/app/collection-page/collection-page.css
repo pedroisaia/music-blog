@@ -10,6 +10,24 @@
   bottom: 0;
 }
 
+.collection-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: white;
+  letter-spacing: 2px;
+  text-align: center; /* Centers the text */
+  margin: 0 auto 4rem auto;
+  position: relative;
+  z-index: 10;
+}
+
+.shop-content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 1rem;
+}
+
 .sidebar {
   background: rgba(0, 0, 0, 0.2);
   border: 1px solid black;
@@ -24,8 +42,9 @@
   gap: 2.5rem;
   
   flex-shrink: 0;
-  position: absolute;
+  position: sticky;
   top: 8rem;
+  max-height: 85vh;
   overflow-y: auto;
 }
 
@@ -129,10 +148,8 @@
 .main-content {
   flex: 1;
   display: flex;
-  margin-left: -8rem;
   flex-direction: row;
   align-items: flex-start;
-  height: calc(100vh - 0.8rem);
 }
 
 .blog-list {
@@ -140,7 +157,7 @@
   flex-direction: column;
   flex: 3;
   gap: 1.5rem;
-  margin-left: 550px;
+  margin-left: 2.4rem;
 }
 
 .blog-post {

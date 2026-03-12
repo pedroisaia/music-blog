@@ -71,5 +71,85 @@ export const ARTICLES: Article[] = [
     description: "A new generation of musicians is bringing jazz back to the forefront of global culture.",
     date: "2024-04-25",
     image: "https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 9,
+    title: "Rediscovering Maestro Moacir",
+    keywords: "Music",
+    description: "How a Black musician from Pernambuco, Brazil, recorded iconic albums in the US and became a legendary maestro during the dictatorship era.",
+    date: "2024-04-20",
+    image: "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 10,
+    title: "The Golden Era of Couch Co-Op",
+    keywords: "Technology",
+    description: "Looking back at the best local multiplayer games from the GameCube era and how the Nintendo Switch is reviving the shared screen experience.",
+    date: "2024-04-18",
+    image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 11,
+    title: "Nature as a Canvas",
+    keywords: "Fashion",
+    description: "Exploring the delicate art of embroidering natural elements like leaves using fine cotton threads, and how it influences indie album art.",
+    date: "2024-04-15",
+    image: "https://images.unsplash.com/photo-1584311899144-8456209c2dbd?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 12,
+    title: "Exploiting Game Mechanics",
+    keywords: "Technology",
+    description: "From leveling up Enchanting and Smithing to the infamous fortify restoration loop, why breaking a game's limits is sometimes the most fun.",
+    date: "2024-04-12",
+    image: "https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 13,
+    title: "A Sonic Journey Through Berlin",
+    keywords: "Travel",
+    description: "Mapping out the underground techno clubs and historic record stores that define Germany's capital.",
+    date: "2024-04-10",
+    image: "https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 14,
+    title: "The Return of the Cassette",
+    keywords: "Music",
+    description: "Following the vinyl boom, cassette tapes are the next analog format making a surprise resurgence among audiophiles.",
+    date: "2024-04-05",
+    image: "https://images.unsplash.com/photo-1512411624479-335dbb7ab4de?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 15,
+    title: "Wearable Tech on the Runway",
+    keywords: "Fashion",
+    description: "High fashion meets hardware: how designers are integrating smart fabrics and LEDs into their latest collections.",
+    date: "2024-04-01",
+    image: "https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 16,
+    title: "Lost Sounds of the 80s",
+    keywords: "Music",
+    description: "A deep dive into the obscure synthesizers and drum machines that defined the early days of synth-pop.",
+    date: "2024-03-28",
+    image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 17,
+    title: "Poetry in the Digital Age",
+    keywords: "Literature",
+    description: "How social media platforms have birthed a new generation of micro-poets reaching global audiences.",
+    date: "2024-03-25",
+    image: "https://images.unsplash.com/photo-1455390582262-044cdead2708?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    id: 18,
+    title: "Backpacking the Andes",
+    keywords: "Travel",
+    description: "Essential tips and breathtaking routes for a month-long journey through South America's greatest mountain range.",
+    date: "2024-03-20",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop"
   }
 ];
